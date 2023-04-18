@@ -18,22 +18,31 @@ export default {
                 return originResponse;
             }
             const headersMap = getHeaders(request.headers);
-            const start = Date.now();
-            const rtiResponse = await rtiService.callRTI(
-                {
-                    url: requestURL.href,
-                    headers: headersMap,
-                    method: request.method,
-                    ip: request.headers.get('x-real-ip')!,
-                    eventType: rtiCore.getEventType(requestURL.pathname, request.method),
-                },
-                config,
-            );
-            const end = Date.now();
-            const duration = end - start;
-            console.log(`rti_duration: ${duration}`);
-            context.waitUntil(log(duration));
+            const startRTI = Date.now();
+            const payload = {
+                url: requestURL.href,
+                headers: headersMap,
+                method: request.method,
+                ip: request.headers.get('x-real-ip')!,
+                eventType: rtiCore.getEventType(requestURL.pathname, request.method),
+                ja3: request.cf?.botManagement.ja3Hash,
+            };
+            if (config.debug) {
+                console.log(`payload: ${JSON.stringify(payload)}`);
+            }
+            const rtiResponse = await rtiService.callRTI(payload, config);
+            if (config.debug) {
+                console.log(`rtiResponse: ${JSON.stringify(rtiResponse)}`);
+            }
+            const endRTI = Date.now();
+            const duration = endRTI - startRTI;
+            if (config.telemetry) {
+                context.waitUntil(log(duration));
+            }
             const action = rtiCore.getAction(rtiResponse);
+            if (config.debug) {
+                console.log(`action: ${action}`);
+            }
             if (action === Action.CHALLENGE && config.challenge) {
                 try {
                     const challengeResult = await config.challenge(request, rtiResponse);
@@ -83,10 +92,13 @@ function getHeaders(headers: Headers): HeadersMap {
 }
 
 function setHeaders(headers: Headers, rtiResponse: RTIResponse) {
-    headers.set('x-cheq-rti-version', String(rtiResponse.version));
-    headers.set('x-cheq-rti-is-invalid', String(rtiResponse.isInvalid));
-    headers.set('x-cheq-rti-request-id', rtiResponse.requestId);
-    headers.set('x-cheq-rti-threat-type-code', String(rtiResponse.threatTypeCode));
+    const result = [
+        `version=${rtiResponse.version}`,
+        `is-invalid=${rtiResponse.isInvalid}`,
+        `threat-type-code=${rtiResponse.threatTypeCode}`,
+        `request-id=${rtiResponse.requestId}`,
+    ].join(';');
+    headers.set('x-cheq-rti-result', result);
     headers.set('x-cheq-rti-set-cookie', rtiResponse.setCookie);
 }
 
