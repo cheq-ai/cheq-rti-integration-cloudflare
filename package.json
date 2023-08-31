@@ -1,8 +1,8 @@
 {
     "name": "cheq-rti-integration-cloudflare",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "dependencies": {
-        "cheq-rti-client-fetch": "git+ssh://git@github.com:cheq-ai/cheq-rti-client-fetch.git#0.1.0"
+        "cheq-rti-client-fetch": "git+ssh://git@github.com:cheq-ai/cheq-rti-client-fetch.git#0.2.0"
     },
     "devDependencies": {
         "@cloudflare/workers-types": "4.20230307.0",
