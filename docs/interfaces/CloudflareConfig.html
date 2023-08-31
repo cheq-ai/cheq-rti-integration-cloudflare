@@ -25,7 +25,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">CloudflareConfig</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/cheq-ai/cheq-rti-integration-cloudflare/blob/0.1.0/src/config.ts#L6">src/config.ts:6</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/cheq-ai/cheq-rti-integration-cloudflare/blob/0.2.0/src/config.ts#L6">src/config.ts:6</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -51,16 +51,20 @@
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="apiKey" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>api<wbr/>Key</span><a href="#apiKey" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">api<wbr/>Key</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">api<wbr/>Key</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Your API Key, available on the Paradome platform</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Config.apiKey</p>
 <ul>
-<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:88</li></ul></aside></section>
+<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:125</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="blockRedirectCodes" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>block<wbr/>Redirect<wbr/>Codes</span><a href="#blockRedirectCodes" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">block<wbr/>Redirect<wbr/>Codes</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">block<wbr/>Redirect<wbr/>Codes</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
+<div class="tsd-comment tsd-typography"><p>List of RTIResponse.threatTypeCode| threat type codes that will be blocked or redirected if <a href="CloudflareConfig.html#redirectLocation" class="tsd-kind-property">redirectLocation</a> is defined.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Config.blockRedirectCodes</p>
 <ul>
-<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:90</li></ul></aside></section>
+<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:133</li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="challenge" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>challenge</span><a href="#challenge" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">challenge</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">request</span>, <span class="tsd-kind-parameter">response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
@@ -82,69 +86,92 @@
 <h5><span class="tsd-kind-parameter">response</span>: <span class="tsd-signature-type ">RTIResponse</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Response</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/cheq-ai/cheq-rti-integration-cloudflare/blob/0.1.0/src/config.ts#L17">src/config.ts:17</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/cheq-ai/cheq-rti-integration-cloudflare/blob/0.2.0/src/config.ts#L17">src/config.ts:17</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="challengeCodes" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>challenge<wbr/>Codes</span><a href="#challengeCodes" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">challenge<wbr/>Codes</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">challenge<wbr/>Codes</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
+<div class="tsd-comment tsd-typography"><p>List of RTIResponse.threatTypeCode| threat type codes that will invoke integration challenge function if configured.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Config.challengeCodes</p>
 <ul>
-<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:92</li></ul></aside></section>
+<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:141</li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="debug" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>debug</span><a href="#debug" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">debug</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography"><p>Enables local debug logging</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/cheq-ai/cheq-rti-integration-cloudflare/blob/0.1.0/src/config.ts#L22">src/config.ts:22</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/cheq-ai/cheq-rti-integration-cloudflare/blob/0.2.0/src/config.ts#L22">src/config.ts:22</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="ignorePaths" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>ignore<wbr/>Paths</span><a href="#ignorePaths" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">ignore<wbr/>Paths</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">ignore<wbr/>Paths</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+<div class="tsd-comment tsd-typography"><p>Paths that are ignored.</p>
+
+<h3>Example</h3><pre><code class="language-typescript"><span class="hl-0">[</span><span class="hl-1">&#39;/images&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;/api/test&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;</span><span class="hl-2">\\</span><span class="hl-1">.css$&#39;</span><span class="hl-0">, </span><span class="hl-1">&#39;</span><span class="hl-2">\\</span><span class="hl-1">.js$&#39;</span><span class="hl-0">]</span>
+</code></pre>
+</div><aside class="tsd-sources">
 <p>Inherited from Config.ignorePaths</p>
 <ul>
-<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:93</li></ul></aside></section>
+<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:150</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="mode" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>mode</span><a href="#mode" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">mode</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Mode</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">mode</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Mode</span></div>
+<div class="tsd-comment tsd-typography"><p>Mode.MONITORING| Monitoring Mode will send requests to RTI but will not perform any actions like blocking.</p>
+<p>Mode.BLOCKING| Blocking Mode will send requests to RTI and take the appropriate action.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Config.mode</p>
 <ul>
-<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:87</li></ul></aside></section>
+<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:121</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="redirectLocation" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>redirect<wbr/>Location</span><a href="#redirectLocation" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">redirect<wbr/>Location</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">redirect<wbr/>Location</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Location to redirect, if not set, users will be blocked instead of redirected.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Config.redirectLocation</p>
 <ul>
-<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:91</li></ul></aside></section>
+<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:137</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="routeToEventType" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>route<wbr/>To<wbr/>Event<wbr/>Type</span><a href="#routeToEventType" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">route<wbr/>To<wbr/>Event<wbr/>Type</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">event_type</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">EventType</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">method</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">path</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">route<wbr/>To<wbr/>Event<wbr/>Type</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type ">RouteToEventType</span><span class="tsd-signature-symbol">[]</span></div>
+<div class="tsd-comment tsd-typography"><p>List of RouteToEventType mappings</p>
+
+<h3>Example</h3><pre><code class="language-typescript"><span class="hl-0">[</span><br/><span class="hl-0">  {</span><br/><span class="hl-0">    </span><span class="hl-3">path:</span><span class="hl-0"> </span><span class="hl-1">&#39;/api/cart&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-3">method:</span><span class="hl-0"> </span><span class="hl-1">&#39;POST|PUT&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-3">event_type:</span><span class="hl-0"> </span><span class="hl-3">EventType</span><span class="hl-0">.</span><span class="hl-4">ADD_TO_CART</span><span class="hl-0">,</span><br/><span class="hl-0">  },</span><br/><span class="hl-0">  {</span><br/><span class="hl-0">    </span><span class="hl-3">path:</span><span class="hl-0"> </span><span class="hl-1">&#39;/api/search*&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-3">method:</span><span class="hl-0"> </span><span class="hl-1">&#39;PUT&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-3">event_type:</span><span class="hl-0"> </span><span class="hl-3">EventType</span><span class="hl-0">.</span><span class="hl-4">SEARCH</span><span class="hl-0">,</span><br/><span class="hl-0">  },</span><br/><span class="hl-0">  {</span><br/><span class="hl-0">    </span><span class="hl-3">path:</span><span class="hl-0"> </span><span class="hl-1">&#39;/api/payment$&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-3">method:</span><span class="hl-0"> </span><span class="hl-1">&#39;POST&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-3">event_type:</span><span class="hl-0"> </span><span class="hl-3">EventType</span><span class="hl-0">.</span><span class="hl-4">ADD_PAYMENT</span><span class="hl-0">,</span><br/><span class="hl-0">  },</span><br/><span class="hl-0">]</span>
+</code></pre>
+</div><aside class="tsd-sources">
 <p>Inherited from Config.routeToEventType</p>
 <ul>
-<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:94</li></ul></aside></section>
+<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:175</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="tagHash" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>tag<wbr/>Hash</span><a href="#tagHash" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">tag<wbr/>Hash</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">tag<wbr/>Hash</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Your Tag Hash, available on the Paradome platform</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Config.tagHash</p>
 <ul>
-<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:89</li></ul></aside></section>
+<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:129</li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="telemetry" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>telemetry</span><a href="#telemetry" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">telemetry</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography"><p>Enable telemetry logging</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/cheq-ai/cheq-rti-integration-cloudflare/blob/0.1.0/src/config.ts#L10">src/config.ts:10</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/cheq-ai/cheq-rti-integration-cloudflare/blob/0.2.0/src/config.ts#L10">src/config.ts:10</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="timeout" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>timeout</span><a href="#timeout" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">timeout</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">timeout</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>Timeout in milliseconds before cancelling RTI request.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Config.timeout</p>
 <ul>
-<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:100</li></ul></aside></section>
+<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:183</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="trustedIPHeader" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>trustedIPHeader</span><a href="#trustedIPHeader" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">trustedIPHeader</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">trustedIPHeader</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Trusted IP header to be used as client IP. Overwrites RTIRequest.ip if header value exists.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Config.trustedIPHeader</p>
 <ul>
-<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:99</li></ul></aside></section></section></div>
+<li>Defined in node_modules/cheq-rti-client-core-js/dist/types.d.ts:179</li></ul></aside></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
