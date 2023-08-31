@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/cheq-ai/cheq-rti-integration-cloudflare/0.2.0/assets/cheq-logo.svg">
+  <img src="https://raw.githubusercontent.com/cheq-ai/cheq-rti-integration-cloudflare/master/assets/cheq-logo.svg">
 </div>
 
 # cheq-rti-integration-cloudflare
