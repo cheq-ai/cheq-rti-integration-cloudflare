@@ -1,4 +1,11 @@
+<div align="center">
+  <img src="https://raw.githubusercontent.com/cheq-ai/cheq-rti-integration-cloudflare/master/assets/cheq-logo.svg">
+</div>
+
 # cheq-rti-integration-cloudflare
+
+![Integration Version](https://img.shields.io/github/v/release/cheq-ai/cheq-rti-integration-cloudflare?label=Integration%20Version)
+![Cloudflare Wrangler](https://img.shields.io/badge/Cloudflare_Wrangler-3.6.0-44cc11)
 
 This repository provides the components to invoke RTI from Cloudflare.
 
@@ -6,7 +13,7 @@ This repository provides the components to invoke RTI from Cloudflare.
 
 [Cloudflare Integration](https://cheq-ai.github.io/cheq-rti-integration-cloudflare)
 
-Built with [Cloudflare Wrangler](https://developers.cloudflare.com/workers/wrangler/) 
+Built with [Cloudflare Wrangler](https://developers.cloudflare.com/workers/wrangler/)
 
 ### Prerequisites:
 
